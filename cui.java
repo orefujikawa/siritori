@@ -38,17 +38,17 @@ public class cui {
 			String stringcher=String.valueOf(lastcher);
 			String regex="^"+stringcher+".*";
 	//		System.out.print(regex);^i.*が入っている（最後の文字による）
-			Pattern p = Pattern.compile(regex);
+			Pattern pt = Pattern.compile(regex);
 			//System.out.print(p);//^i.*
 			
 			//		マッチング機構
 			String mat="";
 			//手直しが必要
 			while((mat=br.readLine()) !=null) {
-				Matcher m =p.matcher(mat);
+				Matcher Matching=pt.matcher(mat);
 				
-				if(m.find ()) {
-					System.out.print(m.group());
+				if(Matching.find ()) {
+					System.out.print(Matching.group());
 				}
 			}}else {
 				scanner.close();
@@ -71,4 +71,8 @@ public class cui {
  * スタートでなんでもいいので入力
  * 次の文字からスタート
  * このプログラムを終了させたら終了
+ * 
+ * 現在はあいうえお　しか対応していない
+ * あえてインポートパッケージをし正規表現を使いはじめて作った作品
+ * 全部自分で考えて作った
  */
